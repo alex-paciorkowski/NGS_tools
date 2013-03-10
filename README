@@ -1,1 +1,9 @@
-A collection of perlscripts useful for analysis of next-gen sequencing data.
+A collection of perlscripts useful for analysis of NGS (specifically whole exome sequencing) data.
+The workflow in general looks like this:
+fastq files are aligned with BWA.
+SNVs are called using GATK.
+Indels are called using GATK or Pindel.
+SNV and indel VCFs are then filtered by pedigree (suspected AD or AR) and GQ score using the appropriate finder.pl script.
+The output VCFs are then annotated using either SeattleSeq or Annovar.
+The resulting annotated VCFs are then parsed using Solve.pm (under development).
+This module identifies unique gene symbols and annotates them further, allowing for rapid automated review of candidate genes.
