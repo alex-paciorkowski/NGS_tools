@@ -1,9 +1,10 @@
 #!/usr/bin/perl
 #
-# AR_GQ99_annovar_finder.pl
+# AR_GQ99_finder_v2.pl
 # Finds variants that are homozygous or compound heterozygous in proband 
 # and heterozygous in parents.
 # Reads unannotated vcf from gatk: proband, parent1, parent2
+# Uses GQ 99
 # April 4, 2013
 #
 use strict;
